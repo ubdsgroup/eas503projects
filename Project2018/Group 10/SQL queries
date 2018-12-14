@@ -1,4 +1,4 @@
-############# black friday dataset #####################
+############# Black friday dataset #####################
 
 create table black_friday_data (
 User_ID INT(8),
