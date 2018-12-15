@@ -1,0 +1,145 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww28300\viewh16280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 TABLES:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \cb3 \CocoaLigature0 events\
++--------------------------------+---------+------+-----+---------+-------+\
+| Field                          | Type    | Null | Key | Default | Extra |\
++--------------------------------+---------+------+-----+---------+-------+\
+| match_id                       | int(11) | YES  |     | NULL    |       |\
+| id                             | text    | YES  |     | NULL    |       |\
+| index                          | int(11) | YES  |     | NULL    |       |\
+| period                         | int(11) | YES  |     | NULL    |       |\
+| timestamp                      | text    | YES  |     | NULL    |       |\
+| type.name                      | text    | YES  |     | NULL    |       |\
+| possession                     | int(11) | YES  |     | NULL    |       |\
+| possession_team.name           | text    | YES  |     | NULL    |       |\
+| play_pattern.name              | text    | YES  |     | NULL    |       |\
+| team.name                      | text    | YES  |     | NULL    |       |\
+| duration                       | text    | YES  |     | NULL    |       |\
+| related_events.0               | text    | YES  |     | NULL    |       |\
+| player.name                    | text    | YES  |     | NULL    |       |\
+| position.name                  | text    | YES  |     | NULL    |       |\
+| location.0                     | text    | YES  |     | NULL    |       |\
+| location.1                     | text    | YES  |     | NULL    |       |\
+| pass.recipient.id              | text    | YES  |     | NULL    |       |\
+| pass.recipient.name            | text    | YES  |     | NULL    |       |\
+| pass.length                    | text    | YES  |     | NULL    |       |\
+| pass.angle                     | text    | YES  |     | NULL    |       |\
+| pass.height.id                 | text    | YES  |     | NULL    |       |\
+| pass.height.name               | text    | YES  |     | NULL    |       |\
+| pass.end_location.0            | text    | YES  |     | NULL    |       |\
+| pass.end_location.1            | text    | YES  |     | NULL    |       |\
+| pass.type.id                   | text    | YES  |     | NULL    |       |\
+| pass.type.name                 | text    | YES  |     | NULL    |       |\
+| under_pressure                 | text    | YES  |     | NULL    |       |\
+| pass.aerial_won                | text    | YES  |     | NULL    |       |\
+| duel.type.id                   | text    | YES  |     | NULL    |       |\
+| duel.type.name                 | text    | YES  |     | NULL    |       |\
+| duel.outcome.id                | text    | YES  |     | NULL    |       |\
+| duel.outcome.name              | text    | YES  |     | NULL    |       |\
+| interception.outcome.id        | text    | YES  |     | NULL    |       |\
+| interception.outcome.name      | text    | YES  |     | NULL    |       |\
+| pass.switch                    | text    | YES  |     | NULL    |       |\
+| pass.cross                     | text    | YES  |     | NULL    |       |\
+| dribble.outcome.id             | text    | YES  |     | NULL    |       |\
+| dribble.outcome.nam            | text    | YES  |     | NULL    |       |\
+| foul_committed.type.id         | text    | YES  |     | NULL    |       |\
+| foul_committed.type.name       | text    | YES  |     | NULL    |       |\
+| clearance.aerial_won           | text    | YES  |     | NULL    |       |\
+| ball_recovery.recovery_failure | text    | YES  |     | NULL    |       |\
+| foul_committed.advantage       | text    | YES  |     | NULL    |       |\
+| foul_won.advantage             | text    | YES  |     | NULL    |       |\
+| pass.assisted_shot_id          | text    | YES  |     | NULL    |       |\
+| pass.shot_assist               | text    | YES  |     | NULL    |       |\
+| shot.statsbomb_xg              | text    | YES  |     | NULL    |       |\
+| shot.end_location.0            | text    | YES  |     | NULL    |       |\
+| shot.end_location.1            | text    | YES  |     | NULL    |       |\
+| shot.end_location.2            | text    | YES  |     | NULL    |       |\
+| shot.body_part.id              | text    | YES  |     | NULL    |       |\
+| shot.body_part.name            | text    | YES  |     | NULL    |       |\
+| shot.outcome.id                | text    | YES  |     | NULL    |       |\
+| shot.outcome.name              | text    | YES  |     | NULL    |       |\
+| shot.type.id                   | text    | YES  |     | NULL    |       |\
+| shot.type.name                 | text    | YES  |     | NULL    |       |\
+| shot.freeze_frame.0.location.0 | text    | YES  |     | NULL    |       |\
+| shot.freeze_frame.0.location.1 | text    | YES  |     | NULL    |       |\
+| foul_committed.card.id         | text    | YES  |     | NULL    |       |\
+| foul_committed.card.name       | text    | YES  |     | NULL    |       |\
+| pass.goal_assist               | text    | YES  |     | NULL    |       |\
+| block.deflection               | text    | YES  |     | NULL    |       |\
+| foul_committed.penalty         | text    | YES  |     | NULL    |       |\
+| shot.one_on_one                | text    | YES  |     | NULL    |       |\
+| shot.open_goal                 | text    | YES  |     | NULL    |       |\
++--------------------------------+---------+------+-----+---------+-------+\
+\
+matches\
++--------------------------+---------+------+-----+---------+-------+\
+| Field                    | Type    | Null | Key | Default | Extra |\
++--------------------------+---------+------+-----+---------+-------+\
+| match_id                 | int(11) | YES  |     | NULL    |       |\
+| match_date               | text    | YES  |     | NULL    |       |\
+| home_team.home_team_name | text    | YES  |     | NULL    |       |\
+| away_team.away_team_name | text    | YES  |     | NULL    |       |\
+| home_score               | int(11) | YES  |     | NULL    |       |\
+| away_score               | int(11) | YES  |     | NULL    |       |\
++--------------------------+---------+------+-----+---------+-------+\
+\
+\
+ranks\
++-------+---------+------+-----+---------+-------+\
+| Field | Type    | Null | Key | Default | Extra |\
++-------+---------+------+-----+---------+-------+\
+| rank  | int(11) | YES  |     | NULL    |       |\
+| team  | text    | YES  |     | NULL    |       |\
++-------+---------+------+-----+---------+-------+\
+\
+team_2_points\
++----------+---------------------+------+-----+---------+-------+\
+| Field    | Type                | Null | Key | Default | Extra |\
++----------+---------------------+------+-----+---------+-------+\
+| team     | mediumtext          | YES  |     | NULL    |       |\
+| match_id | int(11)             | YES  |     | NULL    |       |\
+| rnk      | bigint(21) unsigned | NO   |     | 0       |       |\
+| points   | int(11)             | YES  |     | NULL    |       |\
+| gd       | bigint(20)          | YES  |     | NULL    |       |\
++----------+---------------------+------+-----+---------+-------+\
+\
+team_3_attack_10\
++-----------+---------------+------+-----+---------+-------+\
+| Field     | Type          | Null | Key | Default | Extra |\
++-----------+---------------+------+-----+---------+-------+\
+| team_name | mediumtext    | YES  |     | NULL    |       |\
+| avg_score | decimal(14,4) | YES  |     | NULL    |       |\
+| avg_xg    | double(23,6)  | YES  |     | NULL    |       |\
+| shots     | decimal(24,4) | YES  |     | NULL    |       |\
+| dribbles  | decimal(24,4) | YES  |     | NULL    |       |\
++-----------+---------------+------+-----+---------+-------+\
+\
+team_3_defense5\
++-----------+---------------+------+-----+---------+-------+\
+| Field     | Type          | Null | Key | Default | Extra |\
++-----------+---------------+------+-----+---------+-------+\
+| team_name | mediumtext    | YES  |     | NULL    |       |\
+| conceded  | decimal(14,4) | YES  |     | NULL    |       |\
+| saves     | decimal(24,4) | YES  |     | NULL    |       |\
+| blocks    | decimal(24,4) | YES  |     | NULL    |       |\
++-----------+---------------+------+-----+---------+-------+\
+\
+team_3_mids7\
++-----------+---------------+------+-----+---------+-------+\
+| Field     | Type          | Null | Key | Default | Extra |\
++-----------+---------------+------+-----+---------+-------+\
+| team_name | text          | YES  |     | NULL    |       |\
+| poss      | double(26,4)  | YES  |     | NULL    |       |\
+| pass_acc  | int(11)       | YES  |     | NULL    |       |\
+| passes    | decimal(24,4) | YES  |     | NULL    |       |\
++-----------+---------------+------+-----+---------+-------+\
+}
