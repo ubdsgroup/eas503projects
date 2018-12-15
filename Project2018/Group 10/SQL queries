@@ -1,0 +1,61 @@
+############# Black friday dataset #####################
+
+create table black_friday_data (
+User_ID INT(8),
+Product_ID CHAR(12),
+Gender CHAR(1),
+Age INT(2),
+Occupation INT(2),
+City_Category CHAR(2),
+Stay_In_Current_City_Years INT(2),
+Marital_Status INT(1),
+Product_Category_1 INT(2),
+Product_Category_2 INT(2),
+Product_Category_3 INT(2),
+Purchase INT(64),
+FOREIGN KEY (Product_Category_1) REFERENCES Product_Categories (Product_Category_1),
+FOREIGN KEY (Age) REFERENCES Age_Groups (Age),
+FOREIGN KEY (City_Category) REFERENCES City_Category (City_Category),
+FOREIGN KEY (Occupation) REFERENCES Occupation (Occupation)
+);
+
+LOAD DATA LOCAL INFILE 'C:/UB_Fall_Semester/Programming_and_Database_fundamentals_for_Data_Scientists/Python_Project/BlackFriday_1.csv' REPLACE INTO TABLE BLACK_FRIDAY_DATA FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+################### Product_Category ##################
+
+create table Product_Categories(Product_Category_1 INT(2), Category CHAR(32), PRIMARY KEY (Product_Category_1));
+
+LOAD DATA LOCAL INFILE 'Product_Categories.csv' INTO TABLE PRODUCT_CATEGORIES FIELDS TERMINATED BY ',' ESCAPED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+################### Age_groups ##################
+
+create table Age_Groups (Age INT(2), Category CHAR(20), Category_num INT(2), PRIMARY KEY  (Age));
+
+LOAD DATA LOCAL INFILE 'Age_Groups.csv' INTO TABLE AGE_GROUPS FIELDS TERMINATED BY ',' ESCAPED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
+
+################### Occupation ##################
+
+create table Occupation (Occupation INT(2), Occupation_type VARCHAR(64), MedianBaseSalary INT(16), PRIMARY KEY (Occupation) );
+
+LOAD DATA LOCAL INFILE 'Occupation.csv' INTO TABLE OCCUPATION FIELDS TERMINATED BY ',' ESCAPED BY '"' IGNORE 1 LINES;
+
+################### City_Category ##################
+
+create table City_Category (City_Category VARCHAR(2), Tier VARCHAR(10), PRIMARY KEY (City_Category));
+
+LOAD DATA LOCAL INFILE 'City_Tiers.csv' INTO TABLE CITY_CATEGORY FIELDS TERMINATED BY ',' ESCAPED BY '"' IGNORE 1 LINES;
+
+####################################################
+
+##### Data Cleaning in sql ########
+ALTER TABLE black_friday_data DROP Product_Category_2;
+
+ALTER TABLE black_friday_data DROP Product_Category_3;
+
+ALTER TABLE black_friday_data DROP Product_ID;
+
+ALTER TABLE black_friday_data DROP User_ID;
+
+UPDATE TABLE black_friday_data SET Stay_In_Current_City_Years = "4"  where Stay_In_Current_City_Years = "4+";
+
+####################################################
